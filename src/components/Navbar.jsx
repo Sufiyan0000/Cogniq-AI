@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 import logo from './../assets/CompanyLogo.svg'
-import ContactUsBtn from './ui/ContactUsBtn'
+import PrimaryBtn from './ui/PrimaryBtn'
 import { FaLongArrowAltRight } from "react-icons/fa";
 
 const NAV_ITEMS = ['Home','About Us', 'services', 'our lab', 'blogs']
@@ -42,7 +42,7 @@ const Navbar = () => {
 
       {/*  Contact Us Button (large Screen Only)*/}
       <div className='hidden md:block '>
-        <ContactUsBtn text='Contact Us' />
+        <PrimaryBtn text='Contact Us' />
       </div>
 
       {/* Hamburger Menu for Moblie/Small Devices */}
@@ -86,7 +86,7 @@ const Navbar = () => {
       ${open ? "translate-x-0" : "-translate-x-full"}
     `}
         >
-          <ul className="list-none flex flex-col gap-5 mt-10">
+          <ul className="list-none flex flex-col gap-3">
             {NAV_ITEMS.map((item) => {
               const path = item.toLowerCase().replace(/\s+/g, "-");
 
@@ -100,7 +100,7 @@ const Navbar = () => {
                 >
                   <a
                     href={`#${path}`}
-                    className="capitalize block py-2"
+                    className="capitalize block py-1"
                     onClick={() => {
                       setActive(path);
                       setOpen(false); // close after click
@@ -114,7 +114,7 @@ const Navbar = () => {
           </ul>
           <hr className=' text-neutral-200 w-[90vw]'/>
           <div>
-            <ContactUsBtn className='py-4 gap-3 text-xl' icon={FaLongArrowAltRight}/>
+            <PrimaryBtn className='py-4 gap-3 text-xl' icon={FaLongArrowAltRight}/>
           </div>
           <div className='fixed bottom-25 text-center opacity-70'>
             <p className='uppercase'>engineering the next generation</p>

@@ -1,7 +1,7 @@
 import { useState } from 'react'
 import './App.css'
 import Navbar from './components/Navbar'
-import bgImage from './assets/HeroSectionBG.svg'
+import Hero from './components/Hero'
 
 function App() {
   const [count, setCount] = useState(0)
@@ -9,9 +9,9 @@ function App() {
   return (
     <>
       <div 
-      style={{ backgroundImage: `url(${bgImage})`}}
-      className='min-h-screen bg-cover bg-center'>
+      className='min-h-screen'>
         <Navbar />
+        <Hero />
       </div>
     </>
   )

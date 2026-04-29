@@ -1,6 +1,6 @@
 import React from 'react'
 
-const ContactUsBtn = ( {
+const PrimaryBtn = ( {
     className = "",
     text = "Contact Us",
     link = "#",
@@ -17,4 +17,4 @@ const ContactUsBtn = ( {
   )
 }
 
-export default ContactUsBtn
+export default PrimaryBtn
