@@ -21,7 +21,7 @@ const Navbar = () => {
       </div>
 
       {/* Tabs / computer Links */}
-      <ul className='hidden md:flex gap-9 list-none'>
+      <ul className='hidden md:flex md:gap-5 lg:gap-9 list-none'>
         {NAV_ITEMS.map((item) => {
 
           const path = item.toLowerCase().replace(/\s+/g, '-');
